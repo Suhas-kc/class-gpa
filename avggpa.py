@@ -6,9 +6,9 @@ usnlst = []
 for i in range(66,127):
     if i == 110 or i == 106: continue                                               #Makes a list of usn's from 066 to 126
     if i < 100:
-        usnlst.append('1DT15CS0'+str(i))
+        usnlst.append('1XX15CS0'+str(i))
     else:
-        usnlst.append('1DT15CS'+str(i))
+        usnlst.append('1XX15CS'+str(i))
         
 
 missedlist = []
@@ -16,7 +16,7 @@ sumgpa = 0.0
 highest = 0.0
 highlst = []
 for usn in usnlst:
-    url = 'http://result.vtu.ac.in/cbcs_results2016.aspx?usn='
+    url = 'University website'
     url = url + usn + '&sem=2'                                                    #Gives the result url for that usn
     urlh = urllib.urlopen(url)  
     data = urlh.read()                                                  #Reads the html file of the results page
